@@ -199,16 +199,30 @@ h2 {
         </div>
     </section>
 
-    <!-- Profile -->
-    <section id="profile">
-        <div class="card">
-            <h2>OWNER PROFILE</h2>
-            <button onclick="alert('AREX Profile')">
-    View Profile
-</button>
+ <!-- Profile -->
+<section id="profile">
+    <div class="card">
+
+        <h2>OWNER PROFILE</h2>
+
+        <button onclick="document.getElementById('profileDetails').style.display='block'">
+            View Profile
+        </button>
+
+        <div id="profileDetails" style="display:none; margin-top:20px;">
+
+            <img src="arex-id.jpg"
+                 alt="AREX Gaming ID"
+                 style="width:100%; max-width:400px; border-radius:12px;">
+
             <p><b>Username:</b> m1 AREX</p>
             <p><b>Game:</b> Free Fire MAX</p>
             <p><b>Level:</b> 71</p>
+
+        </div>
+
+    </div>
+</section>
 
             </* 🔥 NEON GAMING LOOK */
 

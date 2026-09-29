@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,44 @@
     <title>AREX Gaming Hub</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            background: #0a0a0a;
+            background: #050505;
             color: white;
             font-family: Arial, sans-serif;
         }
 
         nav {
-            background: #151515;
+            background: #0b0b0b;
+            border-bottom: 1px solid #00ff88;
+            box-shadow: 0 0 15px #00ff8844;
             padding: 16px;
             display: flex;
             justify-content: center;
             gap: 25px;
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        section {
+            scroll-margin-top: 70px;
         }
 
         header {
@@ -35,110 +52,80 @@
             padding: 40px 15px;
         }
 
-        header h1 {
-            font-size: 45px;
-            margin: 10px;
+        .logo {
+            font-size: 55px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            color: #00ff88;
+            text-shadow: 0 0 15px #00ff88;
         }
 
         .tagline {
             color: #aaa;
         }
 
+        .subtitle {
+            color: #777;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
         .card {
             margin: 25px 15px;
             padding: 30px 20px;
-            background: #171717;
+            background: #101010;
+            border: 1px solid #00ff8844;
             border-radius: 18px;
             text-align: center;
+            box-shadow: 0 0 20px #00ff8818;
+        }
+
+        .card:hover {
+            border-color: #00ff88;
+            box-shadow: 0 0 25px #00ff8844;
         }
 
         button {
             padding: 14px 25px;
             border: none;
             border-radius: 10px;
-            background: white;
-            color: black;
+            background: #00ff88;
+            color: #000;
             font-size: 16px;
+            font-weight: bold;
             margin-top: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #00ff8855;
         }
 
-        section {
-            scroll-margin-top: 70px;
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #00ff88;
         }
-        .logo {
-    font-size: 55px;
-    font-weight: bold;
-    letter-spacing: 6px;
-}
 
-.subtitle {
-    color: #777;
-    font-size: 13px;
-    letter-spacing: 3px;
-}
-/* 🔥 NEON GAMING LOOK */
+        input {
+            padding: 12px;
+            width: 80%;
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #00ff88;
+            background: #111;
+            color: white;
+        }
 
-body {
-    background: #050505;
-    color: white;
-    font-family: Arial, sans-serif;
-}
+        .profile-id-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
 
-nav {
-    background: #0b0b0b;
-    border-bottom: 1px solid #00ff88;
-    box-shadow: 0 0 15px #00ff8844;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #00ff88;
-    text-shadow: 0 0 10px #00ff88;
-}
-
-.card {
-    background: #101010;
-    border: 1px solid #00ff8844;
-    box-shadow: 0 0 20px #00ff8818;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #00ff88;
-    box-shadow: 0 0 25px #00ff8844;
-}
-
-.logo {
-    color: #00ff88;
-    text-shadow: 0 0 15px #00ff88;
-}
-
-button {
-    background: #00ff88;
-    color: #000;
-    border: none;
-    font-weight: bold;
-    box-shadow: 0 0 15px #00ff8855;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #00ff88;
-}
-
-h2 {
-    text-shadow: 0 0 8px #ffffff33;
-}
+        h2 {
+            text-shadow: 0 0 8px #ffffff33;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -146,175 +133,212 @@ h2 {
         <a href="#home">Home</a>
         <a href="#tournament">Tournament</a>
         <a href="#profile">Profile</a>
+        <a href="#leaderboard">Leaderboard</a>
     </nav>
+
 
     <!-- Home -->
     <section id="home">
+
         <header>
-          <div class="logo">AREX</div>
-<p class="tagline">GAMING HUB</p>
-<p class="subtitle">PLAY • COMPETE • WIN</p>
+            <div class="logo">AREX</div>
+            <p class="tagline">GAMING HUB</p>
+            <p class="subtitle">PLAY • COMPETE • WIN</p>
         </header>
 
         <div class="card">
             <h2>Welcome to AREX Gaming</h2>
+
             <p>Gaming - Tournaments - Community</p>
 
             <button onclick="alert('Welcome to AREX Gaming Hub!')">
                 Enter Hub
             </button>
         </div>
+
     </section>
+
 
     <!-- Tournament -->
     <section id="tournament">
+
         <div class="card">
+
             <h2>Upcoming Tournament</h2>
+
             <p>Free Fire Battle</p>
             <p>Entry Fee: ₹50</p>
             <p>Prize Pool: ₹500</p>
 
             <button onclick="showForm()">
-    Join Tournament
-</button>
+                Join Tournament
+            </button>
 
-<div id="form" style="display:none; margin-top:20px;">
 
-    <input id="name" type="text" placeholder="Your Name"
-    style="padding:12px; width:80%; margin:5px;">
+            <!-- Registration Form -->
+            <div id="form" style="display:none; margin-top:20px;">
 
-    <input id="uid" type="number" placeholder="Free Fire UID"
-    style="padding:12px; width:80%; margin:5px;">
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Your Name"
+                >
 
-    <input id="phone" type="tel" placeholder="WhatsApp Number"
-    style="padding:12px; width:80%; margin:5px;">
+                <input
+                    id="uid"
+                    type="number"
+                    placeholder="Free Fire UID"
+                >
 
-    <br>
+                <input
+                    id="phone"
+                    type="tel"
+                    placeholder="WhatsApp Number"
+                >
 
-    <button onclick="register()">
-        Register
-    </button>
+                <br>
 
-</div>
+                <button onclick="register()">
+                    Register
+                </button>
+
+            </div>
+
         </div>
+
     </section>
+
 
     <!-- Profile -->
     <section id="profile">
+
         <div class="card">
+
             <h2>OWNER PROFILE</h2>
-            <button onclick="alert('AREX Profile')">
-    View Profile
-</button>
-            <p><b>Username:</b> m1 AREX</p>
-            <p><b>Game:</b> Free Fire MAX</p>
-            <p><b>Level:</b> 71</p>
 
-            </* 🔥 NEON GAMING LOOK */
+            <button onclick="showProfile()">
+                View Profile
+            </button>
 
-body {
-background: #050505;
-color: white;
-font-family: Arial, sans-serif;
-}
 
-nav {
-background: #0b0b0b;
-border-bottom: 1px solid #00ff88;
-box-shadow: 0 0 15px #00ff8844;
-}
+            <!-- Profile Details -->
+            <div
+                id="profileDetails"
+                style="display:none; margin-top:20px;"
+            >
 
-nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-transition: 0.3s;
-}
+                <div class="profile-id-image">
 
-nav a:hover {
-color: #00ff88;
-text-shadow: 0 0 10px #00ff88;
-}
+                    <img
+                        src="arex-id.jpg"
+                        alt="AREX Gaming ID"
+                    >
 
-.card {
-background: #101010;
-border: 1px solid #00ff8844;
-box-shadow: 0 0 20px #00ff8818;
-transition: 0.3s;
-}
+                </div>
 
-.card:hover {
-transform: translateY(-4px);
-border-color: #00ff88;
-box-shadow: 0 0 25px #00ff8844;
-}
+                <p>
+                    <b>Username:</b> m1 AREX
+                </p>
 
-.logo {
-color: #00ff88;
-text-shadow: 0 0 15px #00ff88;
-}
+                <p>
+                    <b>Game:</b> Free Fire MAX
+                </p>
 
-button {
-background: #00ff88;
-color: #000;
-border: none;
-font-weight: bold;
-box-shadow: 0 0 15px #00ff8855;
-transition: 0.3s;
-}
+                <p>
+                    <b>Level:</b> 71
+                </p>
 
-button:hover {
-transform: scale(1.05);
-box-shadow: 0 0 25px #00ff88;
-}
+            </div>
 
-h2 {
-text-shadow: 0 0 8px #ffffff33;
-}
         </div>
-    </section><!-- Leaderboard -->
-<section id="leaderboard">
-    <div class="card">
-        <h2>🏆 Leaderboard</h2>
 
-        <p>🥇 AREX — 125 Points</p>
-        <p>🥈 ZNIX — 110 Points</p>
-        <p>🥉 F4RHN — 95 Points</p>
-        <p>4️⃣ DARKX — 80 Points</p>
-        <p>5️⃣ VEXO — 65 Points</p>
-    </div>
-</section>
-<script>
+    </section>
 
-function showForm() {
-    document.getElementById("form").style.display = "block";
-}
 
-function register() {
+    <!-- Leaderboard -->
+    <section id="leaderboard">
 
-    let name = document.getElementById("name").value;
-    let uid = document.getElementById("uid").value;
-    let phone = document.getElementById("phone").value;
+        <div class="card">
 
-    if (name === "" || uid === "" || phone === "") {
-        alert("Please fill all details!");
-        return;
-    }
+            <h2>🏆 Leaderboard</h2>
 
-    let message =
-        "AREX Gaming Tournament Registration%0A%0A" +
-        "Name: " + name + "%0A" +
-        "Free Fire UID: " + uid + "%0A" +
-        "WhatsApp: " + phone;
+            <p>🥇 AREX — 125 Points</p>
+            <p>🥈 ZNIX — 110 Points</p>
+            <p>🥉 F4RHN — 95 Points</p>
+            <p>4️⃣ DARKX — 80 Points</p>
+            <p>5️⃣ VEXO — 65 Points</p>
 
-    let myWhatsApp = "918210840192";
+        </div>
 
-    window.open(
-        "https://wa.me/" + myWhatsApp + "?text=" + message,
-        "_blank"
-    );
-}
+    </section>
 
-</script>
+
+    <!-- JavaScript -->
+    <script>
+
+        function showForm() {
+
+            document.getElementById("form").style.display = "block";
+
+        }
+
+
+        function register() {
+
+            let name =
+                document.getElementById("name").value;
+
+            let uid =
+                document.getElementById("uid").value;
+
+            let phone =
+                document.getElementById("phone").value;
+
+
+            if (
+                name === "" ||
+                uid === "" ||
+                phone === ""
+            ) {
+
+                alert("Please fill all details!");
+
+                return;
+
+            }
+
+
+            let message =
+                "AREX Gaming Tournament Registration%0A%0A" +
+                "Name: " + name + "%0A" +
+                "Free Fire UID: " + uid + "%0A" +
+                "WhatsApp: " + phone;
+
+
+            let myWhatsApp =
+                "918210840192";
+
+
+            window.open(
+                "https://wa.me/" +
+                myWhatsApp +
+                "?text=" +
+                message,
+                "_blank"
+            );
+
+        }
+
+
+        function showProfile() {
+
+            document.getElementById(
+                "profileDetails"
+            ).style.display = "block";
+
+        }
+
+    </script>
+
 </body>
 </html>
